@@ -1,0 +1,236 @@
+Basics of Java – Clear Notes
+1. What is Java?
+
+Java is a high-level, object-oriented programming language developed by James Gosling at Oracle Corporation.
+
+Features of Java
+Simple and easy to learn
+Object-Oriented
+Platform Independent ("Write Once, Run Anywhere")
+Secure
+Robust (handles errors well)
+Multithreaded
+Portable
+2. Java Program Structure
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+Explanation
+Part	Meaning
+public class HelloWorld	Creates a class named HelloWorld
+public static void main(String[] args)	Main method where execution starts
+System.out.println()	Prints output to the screen
+{ }	Defines blocks of code
+;	Ends a statement
+3. JVM, JRE, and JDK
+JVM (Java Virtual Machine)
+Executes Java bytecode.
+Makes Java platform-independent.
+JRE (Java Runtime Environment)
+Contains JVM + libraries needed to run Java programs.
+JDK (Java Development Kit)
+Contains JRE + compiler and development tools.
+Used to develop Java applications.
+
+Relationship:
+
+JDK
+ └── JRE
+      └── JVM
+4. Variables
+
+A variable stores data.
+
+Syntax
+datatype variableName = value;
+Example
+int age = 20;
+String name = "Rahul";
+double salary = 50000.50;
+5. Data Types
+Primitive Data Types
+Type	Size	Example
+byte	1 byte	10
+short	2 bytes	100
+int	4 bytes	1000
+long	8 bytes	100000L
+float	4 bytes	10.5f
+double	8 bytes	10.5
+char	2 bytes	'A'
+boolean	1 bit	true/false
+Example
+int marks = 90;
+double price = 99.99;
+char grade = 'A';
+boolean passed = true;
+6. Operators
+Arithmetic Operators
++  Addition
+-  Subtraction
+*  Multiplication
+/  Division
+%  Modulus
+
+Example:
+
+int a = 10;
+int b = 5;
+
+System.out.println(a + b); // 15
+Relational Operators
+==
+!=
+>
+<
+>=
+<=
+
+Example:
+
+System.out.println(a > b);
+Logical Operators
+&&  AND
+||  OR
+!   NOT
+
+Example:
+
+boolean result = (a > b && b > 0);
+7. Input from User
+
+Using Scanner class:
+
+import java.util.Scanner;
+
+public class InputDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter name: ");
+        String name = sc.nextLine();
+
+        System.out.println("Hello " + name);
+    }
+}
+8. Conditional Statements
+if Statement
+int age = 18;
+
+if(age >= 18) {
+    System.out.println("Eligible");
+}
+if-else
+if(age >= 18) {
+    System.out.println("Adult");
+}
+else {
+    System.out.println("Minor");
+}
+else-if Ladder
+int marks = 85;
+
+if(marks >= 90)
+    System.out.println("A");
+else if(marks >= 75)
+    System.out.println("B");
+else
+    System.out.println("C");
+9. Switch Statement
+int day = 2;
+
+switch(day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+
+    case 2:
+        System.out.println("Tuesday");
+        break;
+
+    default:
+        System.out.println("Invalid");
+}
+10. Loops
+for Loop
+for(int i=1; i<=5; i++) {
+    System.out.println(i);
+}
+
+Output:
+
+1
+2
+3
+4
+5
+while Loop
+int i = 1;
+
+while(i <= 5) {
+    System.out.println(i);
+    i++;
+}
+do-while Loop
+int i = 1;
+
+do {
+    System.out.println(i);
+    i++;
+} while(i <= 5);
+11. Arrays
+
+An array stores multiple values of the same type.
+
+Declaration
+int[] numbers = {10,20,30,40,50};
+Access Elements
+System.out.println(numbers[0]);
+
+Output:
+
+10
+Loop Through Array
+for(int i=0; i<numbers.length; i++) {
+    System.out.println(numbers[i]);
+}
+12. Methods
+
+Methods are blocks of reusable code.
+
+Example
+public class Demo {
+
+    static void greet() {
+        System.out.println("Welcome");
+    }
+
+    public static void main(String[] args) {
+        greet();
+    }
+}
+Method with Return Value
+static int add(int a, int b) {
+    return a + b;
+}
+
+Usage:
+
+int result = add(10,20);
+13. Object-Oriented Programming (OOP)
+Class
+
+Blueprint for creating objects.
+
+class Student {
+    String name;
+    int age;
+}
+Object
+
+Instance of a class.
+
+Student s1 = new Student();
+s1.name = "Ravi";
+s1.age = 20;
